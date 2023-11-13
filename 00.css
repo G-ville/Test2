@@ -1,0 +1,96 @@
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+area {
+  outline: none;
+}
+
+.popup {
+  padding: 20px;
+  background-color: rgba(100, 100, 100, 0.9);
+  color: white;
+  font-weight: 100;
+  font-size: 14px;
+  position: absolute;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.popup:target {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.popup > .close {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  background-color: black;
+  padding: 4px 10px;
+}
+
+.close-container{
+  position: relative;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  margin-top: 100px;
+  cursor: pointer;
+}
+
+.leftright{
+  height: 4px;
+  width: 50px;
+  position: absolute;
+  margin-top: 24px;
+  background-color: #F4A259;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  transition: all .3s ease-in;
+}
+
+.rightleft{
+  height: 4px;
+  width: 50px;
+  position: absolute;
+  margin-top: 24px;
+  background-color: #F4A259;
+  border-radius: 2px;
+  transform: rotate(-45deg);
+  transition: all .3s ease-in;
+}
+
+label{
+  color: white;
+  font-family: Helvetica, Arial, sans-serif; 
+  font-size: .6em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all .3s ease-in;
+  opacity: 0;
+}
+.close{
+  margin: 60px 0 0 5px;
+  position: absolute;
+}
+
+.close-container:hover .leftright{
+  transform: rotate(-45deg);
+  background-color: #F25C66;
+}
+.close-container:hover .rightleft{
+  transform: rotate(45deg);
+  background-color: #F25C66;
+}
+.close-container:hover label{
+  opacity: 1;
+}
+
+View Compiled
+
+
+Resources1× 0.5× 0.25×Rerun
